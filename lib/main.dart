@@ -14,6 +14,7 @@ class XylophoneApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,6 +37,7 @@ class XylophoneApp extends StatelessWidget {
     return Expanded(
       child: FlatButton(
         color: color,
+        child: Container(),
         onPressed: () {
           player.play('sounds/note$id.wav');
         },
