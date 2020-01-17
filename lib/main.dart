@@ -33,15 +33,11 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 
-  Widget _key({int id, Color color}) {
-    return Expanded(
-      child: FlatButton(
-        color: color,
-        child: Container(),
-        onPressed: () {
-          player.play('sounds/note$id.wav');
-        },
-      ),
-    );
-  }
+  Widget _key({int id, Color color}) => Expanded(
+        child: FlatButton(
+          color: color,
+          child: Container(),
+          onPressed: () => player.play('sounds/note$id.wav'),
+        ),
+      );
 }
